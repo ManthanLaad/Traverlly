@@ -311,8 +311,8 @@ footer ul {
     background: rgba(19, 28, 39, 0.9);
     -webkit-text-fill-color: white;
   }
-  .footer-wrapper {
-    width: 100vw;
+  .form-wrapper {
+    width: 100%;
   }
   footer {
     text-align: center;
