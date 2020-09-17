@@ -49,9 +49,13 @@ button {
   border: none;
   color: whitesmoke;
   cursor: pointer;
-  border-radius: 1rem;
+  transition: background 0.5s ease-in-out;
 }
 
+button:hover {
+  background: yellow;
+  -webkit-text-fill-color: black;
+}
 /* Nav Section Hero */
 
 .main-head {
@@ -114,6 +118,7 @@ nav ul {
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .locations-head {
@@ -141,12 +146,23 @@ nav ul {
 }
 
 .moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
 }
 
 .moving-cloud-2 {
-  top: 20%;
+  animation: cloudAnimation 5s infinite alternate ease-in-out;
+  top: 15%;
   z-index: -2;
   opacity: 0.5;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
 }
 
 /* Media Queries */
@@ -160,5 +176,19 @@ nav ul {
   #logo {
     font-size: 3rem;
     padding: 1rem;
+  }
+  .cloud {
+    pointer-events: none;
+    height: 60rem;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-2 {
+    z-index: -2;
+  }
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.9);
+    -webkit-text-fill-color: white;
   }
 }
