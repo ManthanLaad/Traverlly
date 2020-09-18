@@ -297,6 +297,7 @@ footer ul {
   }
   nav {
     text-align: center;
+    min-height: 10vh;
   }
   #logo {
     font-size: 3rem;
@@ -315,6 +316,9 @@ footer ul {
   .locations-head h3 {
     background: rgba(19, 28, 39, 0.9);
     -webkit-text-fill-color: white;
+  }
+  .benefits-head h2 {
+    margin-top: 6vh;
   }
   .form-wrapper {
     width: 100%;
