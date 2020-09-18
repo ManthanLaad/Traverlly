@@ -62,10 +62,13 @@ button:hover {
 .main-head {
   background: #131c27;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 nav {
-  min-height: 10vh;
+  min-height: 8vh;
   width: 90vw;
   display: flex;
   margin: auto;
@@ -91,7 +94,7 @@ nav ul {
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
     url("./img/landing-page.jpg");
-  min-height: 90vh;
+  min-height: 92vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -170,7 +173,8 @@ nav ul {
 
 .benefits-head {
   background: #343c44;
-  padding: 3rem;
+  padding: 4rem;
+  padding-top: 9rem;
   min-height: 30vh;
   display: flex;
   flex-direction: column;
@@ -182,6 +186,7 @@ nav ul {
 
 .benefits-head h3 {
   padding: 1rem;
+  padding-top: 0rem;
 }
 
 .cards {
