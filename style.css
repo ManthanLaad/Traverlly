@@ -53,10 +53,27 @@ button {
   transition: background 0.5s ease-in-out;
 }
 
-button:hover {
+*:focus {
+  outline-width: medium;
+  outline-style: solid;
+  outline-offset: 2px;
+  outline-color: rgb(196, 196, 2);
+}
+
+button:hover,
+button:focus {
   background: yellow;
   -webkit-text-fill-color: black;
+  border: black solid 3px;
 }
+
+button:focus {
+  outline-width: 1px;
+  outline-offset: 0;
+  outline-style: solid;
+  outline-color: black;
+}
+
 /* Nav Section Hero */
 
 .main-head {
@@ -92,7 +109,7 @@ nav ul {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent),
     url("./img/landing-page.jpg");
   min-height: 92vh;
   background-repeat: no-repeat;
@@ -151,11 +168,11 @@ nav ul {
 }
 
 .moving-cloud-1 {
-  animation: cloudAnimation 3s infinite alternate ease-in-out;
+  animation: cloudAnimation 30s infinite alternate ease-in-out;
 }
 
 .moving-cloud-2 {
-  animation: cloudAnimation 5s infinite alternate ease-in-out;
+  animation: cloudAnimation 10s infinite alternate ease-in-out;
   top: 15%;
   z-index: -2;
   opacity: 0.5;
@@ -173,7 +190,7 @@ nav ul {
 
 .benefits-head {
   background: #343c44;
-  padding: 4rem;
+  padding: 3rem;
   padding-top: 9rem;
   min-height: 30vh;
   display: flex;
@@ -213,6 +230,7 @@ nav ul {
 .card h4,
 .card p {
   padding: 1rem;
+  line-height: 1.8;
 }
 
 .card-icon {
@@ -238,15 +256,17 @@ nav ul {
 }
 
 .form-head {
-  padding: 4rem;
+  padding-top: 3rem;
   text-align: center;
 }
 
 .name-form,
 .email-form {
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   text-align: center;
+  justify-content: center;
 }
+
 .form-wrapper label {
   margin: 0rem 3rem;
 }
@@ -259,8 +279,17 @@ nav ul {
   border-bottom-right-radius: 20px;
 }
 
+.form-wrapper button:focus {
+  -moz-outline-radius-bottomleft: 20px;
+  -moz-outline-radius-bottomright: 20px;
+}
+
 .form-wrapper input {
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
+}
+
+.email-form input {
+  margin-right: 1.8rem;
 }
 
 footer {
