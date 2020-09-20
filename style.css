@@ -285,11 +285,11 @@ nav ul {
 }
 
 .form-wrapper input {
-  padding: 1.5rem 3rem;
+  padding: 0.5rem 0.5rem;
 }
 
-.email-form input {
-  margin-right: 1.8rem;
+.name-form input {
+  margin-left: 1.8rem;
 }
 
 footer {
